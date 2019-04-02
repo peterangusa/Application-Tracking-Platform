@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 $(document).ready(function(){
     $('.login-info-box').fadeOut();
@@ -25,3 +26,22 @@ $('.login-reg-panel input[type="radio"]').on('change', function() {
         $('.register-show').removeClass('show-log-panel');
     }
 });*/
+=======
+$("h1").click(function() {
+  alert("This is a header.");
+});
+
+$("p").click(function() {
+  alert("This is a paragraph.");
+});
+
+$("img").click(function() {
+  alert("This is an image.");
+});
+
+$(document).ready(function() {
+  $("p").click(function() {
+    $("img").show();
+  });
+});
+>>>>>>> 00229dc39324a1670183591e753d56a3dc50bb19
