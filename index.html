@@ -14,8 +14,12 @@
     <link rel="stylesheet" href="css/themify-icons.css" />
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
+    <!-- IDEA: jquery -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/student-status.js"></script>
     <!-- main css -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/student-status.css" />
   </head>
   <body>
     <!--================ Start Header Menu Area =================-->
@@ -97,8 +101,25 @@
                 Apply now to join the best University
               </h2>
               <div>
-                <a href="#" class="primary-btn2 mb-3 mb-sm-0">Apply Now!</a>
-                <a href="#" class="primary-btn ml-sm-3 ml-0">View Status</a>
+                <a href="#" class="primary-btn2 mb-3 mb-sm-0" id="apply-btn">Apply Now!</a>
+                <a href="#" class="primary-btn ml-sm-3 ml-0" id="check-status">View Status</a>
+              </div>
+              <div class="status">
+
+
+              <div class="reject">
+              <p id="rejected" class="reject">Rejected</p>
+              </div>
+              <div class="accept">
+                <p id="accepted" class="accept">Accepted, click <a href="#">here</a> to download admission</p>
+              </div>
+              <div class="pend">
+                <p id="pending" class="pend">Pending</p>
+              </div>
+              </div>
+
+
+
               </div>
             </div>
           </div>

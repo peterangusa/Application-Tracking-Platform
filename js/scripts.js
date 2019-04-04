@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function() {
  $("#submit-btn").click('submit',function(event) {
    event.preventDefault();
@@ -36,5 +35,4 @@ $(document).ready(function() {
 
 })
 })
-=======
->>>>>>> e82aa595203d3feac2ba0844b108db01e343acf9
+
