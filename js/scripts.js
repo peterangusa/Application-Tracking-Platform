@@ -31,7 +31,6 @@ $(document).ready(function(){
     }
 
     if (userName == "antonio" && userPassword == "12345"){
-      alert("Successful Login");
       window.location.href = "home.html";
     }
 
