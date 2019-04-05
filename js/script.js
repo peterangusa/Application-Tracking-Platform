@@ -13,7 +13,7 @@ $("form").on("submit", function(event) {
   var newContact = { "name": inputtedName, "username": inputtedUsername, "email": inputtedEmail,
     "password": inputtedPassword, "password1": inputtedPasword1 };
 
-    console.log(newContact);
+    //console.log(newContact);
 
 if (inputtedPassword != inputtedPasword1){
   alert("Password mismatch");
