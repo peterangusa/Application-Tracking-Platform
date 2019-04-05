@@ -1,0 +1,12 @@
+.status{
+  display: none;
+}
+.accept{
+  color:green;
+}
+.reject{
+  color: red;
+}
+.pend{
+  color:blue;
+}

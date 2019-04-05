@@ -4,9 +4,23 @@
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
     <title>Application Form</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendors/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendors/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendors/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendors/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
 
     <body>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
@@ -14,18 +28,18 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Application Form</h2>
-                    <form method="POST">
+                    <form class="app_form">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <label class="label">First name</label>
+                                    <input class="input--style-4" type="text" id="first_name">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">last name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <label class="label">Other names</label>
+                                    <input class="input--style-4" type="text" id="other_name">
                                 </div>
                             </div>
                         </div>
@@ -34,7 +48,7 @@
                                 <div class="input-group">
                                     <label class="label">Date of birth</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <input class="input--style-4 js-datepicker" type="text" id="birthday">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -44,11 +58,11 @@
                                     <label class="label">Gender</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" name="gender" value="male">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">Female
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="gender" value="female">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -59,13 +73,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" id="email">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" id="phone">
                                 </div>
                             </div>
                         </div>
@@ -73,36 +87,146 @@
                           <div class="col-2">
                               <div class="input-group">
                                   <label class="label">Address</label>
-                                  <input class="input--style-4" type="text" name="address">
-                          </div>
+                                  <input class="input--style-4" type="text" id="address">
+                              </div>
                           </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Parent/ Gurdian's Name</label>
-                                    <input class="input--style-4" type="gname" name="gname">
+                                    <input class="input--style-4" type="gname" id="gname">
                                 </div>
                             </div>
                         </div>
                         <div class="input-group">
-                            <label class="label">Select Course</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                            <label class="label">Select Course (first Choice)</label>
+
+                                <select id="choice_one">
                                     <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Bachelor Of Sc.Computer Science</option>
-                                    <option>Bachelor Of Sc. education</option>
-                                    <option>Bachelor Of Telecommunication Engineering</option>                              
+                                    <option>AGR - Bachelor of Science In Agriculture </option>
+                                    <option>AGE - Bachelor of Science In Agricultural Engineering</option>
+                                    <option>ECO - Bachelor of Arts In Economics</option>
+                                    <option>STA - Bachelor of Statistics</option>
+                                    <option>CSC - Bachelor of Science In Computer Science</option>
+                                    <option>BSW - Bachelor of Science In Software Engineering</option>
+                                    <option>LIS - Bachelor of Library and Information Science</option>
+                                    <option>BSI - Bachelor of Information Systems and Technology</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
+                            <div class="input-group">
+                                <label class="label">Select Course (Second Choice)</label>
+
+                                    <select id="choice_two">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>AGR - Bachelor of Science In Agriculture </option>
+                                        <option>AGE - Bachelor of Science In Agricultural Engineering</option>
+                                        <option>ECO - Bachelor of Arts In Economics</option>
+                                        <option>STA - Bachelor of Statistics</option>
+                                        <option>CSC - Bachelor of Science In Computer Science</option>
+                                        <option>BSW - Bachelor of Science In Software Engineering</option>
+                                        <option>LIS - Bachelor of Library and Information Science</option>
+                                        <option>BSI - Bachelor of Information Systems and Technology</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                            </div>
+
+                              <h6 class="title">Enter your A'level Results</h6>
+
+                              <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Principle Subject</label>
+                                        <input class="input--style-4" type="text" id="psubject1">
+                                        <input class="input--style-4" type="text" id="psubject2">
+                                        <input class="input--style-4" type="text" id="psubject3">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label class="label">Select Grade</label>
+
+                                        <select id="pri_grade1">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="6" >A </option>
+                                            <option value="5">B </option>
+                                            <option value="4">C</option>
+                                            <option value="3">D</option>
+                                            <option value="2">E</option>
+                                            <option value="0">F</option>
+                                            <option value="1">O</option>
+                                        </select>
+
+                                        <div class="select-dropdown"></div>
+                                        <select id="pri_grade2">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="6" >A </option>
+                                            <option value="5">B </option>
+                                            <option value="4">C</option>
+                                            <option value="3">D</option>
+                                            <option value="2">E</option>
+                                            <option value="0">F</option>
+                                            <option value="1">O</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                        <select id="pri_grade3">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="6" >A </option>
+                                            <option value="5">B </option>
+                                            <option value="4">C</option>
+                                            <option value="3">D</option>
+                                            <option value="2">E</option>
+                                            <option value="0">F</option>
+                                            <option value="1">O</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Subsidiary Subject</label>
+                                        <input class="input--style-4" type="text" id="sub_subject1">
+                                        <input class="input--style-4" type="text" id="sub_subject2">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label class="label">Select Grade</label>
+
+                                        <select id="subgrade1">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value = "1">O</option>
+                                            <option value = "0">F</option>
+                                        </select>
+
+                                        <div class="select-dropdown"></div>
+                                        <select id="subgrade2">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value = "1">O</option>
+                                            <option value = "0">F</option>
+                                        </select>
+                                </div>
+
+                              </div>
+
+                                <input type="file" id="upload" multiple><br><br>
+                                 Upload your scanned resultslips and click Submit.<br>
                         </div>
+
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--blue" id="submit-btn"type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Jquery JS-->
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendors/select2/select2.min.js"></script>
+    <script src="vendors/datepicker/moment.min.js"></script>
+    <script src="vendors/datepicker/daterangepicker.js"></script>
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
