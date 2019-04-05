@@ -1,18 +1,3 @@
-/*$(function(){
-$("#admin1").on("click", function(){
-
-  var name1 = document.getElementById("name1").value;
-  var passwordA = document.getElementById("passwordA").value;
-
-
-  if (name1 = "" && passwordA = ""){
-    alert("please input the details");
-  }
-
-});
-
-});*/
-
 
 $(document).ready(function(){
   $("#form").submit(function(event) {
