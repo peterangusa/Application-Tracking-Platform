@@ -14,7 +14,7 @@ $("#bttn").on("click", function(){
 
 
   else  if (username== 'antonio' && password== '123'){
-    window.location.href= "update.html";
+    window.location.href= "home.html";
     }
     else{
       document.getElementById("alert").innerHTML= "Your password and username are wrong";

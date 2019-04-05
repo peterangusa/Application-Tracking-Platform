@@ -1,34 +1,42 @@
 /*$(function(){
 $("#admin1").on("click", function(){
 
-  var username1 = document.getElementById("name1").value;
-  var passwordA = document.getElementById("password12").value;
+  var name1 = document.getElementById("name1").value;
+  var passwordA = document.getElementById("passwordA").value;
 
 
-  alert("clicked");
-
-
-  if ((username1 !== "Admin") && (passwordA !== "123456")) {
-    alert("Input the required credentials");
+  if (name1 = "" && passwordA = ""){
+    alert("please input the details");
   }
-  else{
-    window.html.href = "update.html";
-  }
+
 });
 
 });*/
 
 
-$(function(){;
-$("admin1").on("submit", function(event) {
-  event.preventDefault();
+$(document).ready(function(){
+  $("#form").submit(function(event) {
+    event.preventDefault();
 
-  var inputtedAdmin = $("input#name1").val();
-  var inputtedPasswordA = $("input#password12").val();
+    var inputAdmin = $(this).find("[name=name1]").val();
+    var inputPassword = $(this).find("[name=pass]").val();
 
-  var newAdmin = { name1: "inputtedAdmin", password12: "inputtedPaswordA" };
 
-  console.log(newAdmin);
+     //var newAdmin = { "name1": inputtedAdmin, "pass": inputAdmin };
 
-});
+    //console.log(inputAdmin);
+    //console.log(inputAdmin);
+  if (inputPassword != "12345"){
+      alert("Wrong Credentils");
+
+    }
+
+    else{
+      window.location.href = "update.html";
+
+    }
+
+
+
+  });
 });
