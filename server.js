@@ -1,10 +1,9 @@
-var express = require ('express');
-var app = express ();
-var PORT = process.env.PORT || 3000;
-app.use(express.static(_dirname));
-app.listen(PORT, function(){
-  console.log('server listening on '+ PORT);
+const fs = require('fs')
+const bodyParser = require('body-parser')
+const jsonServer = require('json-server')
+const jwt = require('jsonwebtoken')
 
+const server = jsonServer.create()
+const router = jsonServer.router('./db.json')
 
-
-});
+const userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
