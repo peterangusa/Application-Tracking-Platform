@@ -3,8 +3,6 @@
   <head>
     <link rel="stylesheet" href="css/bootstrap.css"  type="text/css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script type="js/scripts1.js"></script>
     <meta charset="utf-8">
     <title>Login</title>
   </head>
@@ -17,13 +15,18 @@
       <div class="login-page">
 
         <div class="form">
-            <form class="login-form">
-              <input type="text" placeholder="Admin" id="name1" >
-              <input type="password" placeholder="Password" id="password12" >
-              <button id="admin1">login</button>
+            <form class="login-form" id="form" method="post">
+              <input type="text" placeholder="Admin" id="name1" name="name1">
+              <input type="password" placeholder="Password" id="password12" name="pass">
+              <button type="submit" id="admin1">login</button>
+
+              <p id="blank"></p>
+
             </form>
 
         </div>
     </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts1.js"></script>
 </body>
 </html>
