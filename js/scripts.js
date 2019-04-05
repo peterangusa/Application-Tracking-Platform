@@ -31,8 +31,35 @@ $(document).ready(function() {
      var finalgrade = p1+p2;
      alert('grade is: '+finalgrade);
 
+     $("ul#applicants").append("<li><span class='applicants'>" +
+                                     app_form.first_name +
+                                     "</span></li>");
+                                    $("#first_name").val("");
+                                    $("#other_name").val();
+                                    $("#birthday").val("");
+                                    $("input:radio[name='gender']:checked").value;
+                                    $("input#email").val("");
+                                    $("input#phone").val("");
+                                    $("address").val("");
+                                    $("input#gname").val("");
+                                    $("input#choice_one").val("");
+                                    $("input#choice_two").val("");
+                                    $("#psubject1").val("");
+                                    $("input#psubject2").val("");
+                                    $("input#psubject3").val("");
+                                    $("#pri_grade1".value);
+                                    $("#pri_grade2").value;
+                                    $("#pri_grade3").value;
+                                    $("#sub_subject1").val("");
+                                    $("#sub_subject2").val("");
+                                    $("#subgrade1").value;
+                                    $("#subgrade2").value;
+                                    $("input#upload").values;
+
+
+
+
 
 
 })
 })
-
