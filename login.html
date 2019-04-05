@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="css/bootstrap.css"  type="text/css">
     <link rel="stylesheet" href="css/styles.css">
-    <script type="js/scripts.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/validate.js"></script>
     <meta charset="utf-8">
     <title>Login</title>
   </head>
 <body>
-  <div class="login-page">
+  <nav class="navbar navbar-success bg-light">
+    <button><a href="adminlog.html" class="navbar-brand">Admin</a></button>
+  </nav>
+    <div class="login-page">
+      <h3>Login to your account</h3>
+
 
       <div class="form">
 
+                 <form class="login-form" name="validate form" method="post">
 
-          <form class="login-form">
-            <input type="text" placeholder="Username"/ name="name" required>
-            <input type="password" placeholder="Password"/>
-            <button>login</button>
-            <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
-          </form>
-      </div>
-</div>
-  </body>
+              <input id="username" type="text" placeholder="Username or Email Address" name="username" >
+              <input id="password" type="text" placeholder="Password" name="password" >
+
+              <button id="bttn">login</button>
+
+              <p id="alert"></p>
+
+              <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+
+     </body>
 </html>
